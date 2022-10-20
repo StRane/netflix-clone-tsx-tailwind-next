@@ -14,7 +14,6 @@ import { useRecoilValue } from "recoil";
 
 import { getProducts, Product } from "@stripe/firestore-stripe-payments";
 import payments from "../lib/stripe";
-
 interface Props {
   netflixOriginals: Movie[];
   trendingNow: Movie[];
@@ -41,7 +40,7 @@ const Home = ({
   const { loading } = useAuth();
   const showModal = useRecoilValue(modalState);
 
-  console.log(products)
+  console.log(products);
 
   const subscription = false;
 
@@ -83,7 +82,9 @@ export const getServerSideProps = async () => {
   const products = await getProducts(payments, {
     includePrices: true,
     activeOnly: true,
-  }).then((res)=>res).catch((error)=> console.log(error));
+  })
+    .then((res) => res)
+    .catch((error) => console.log(error));
 
   const [
     netflixOriginals,
