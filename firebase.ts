@@ -1,17 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp ,getApp, getApps } from "firebase/app";
-import { getFirestore } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 import { getAnalytics } from "firebase/analytics";
-import { env } from "process";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-const API_KEY2 = process.env.NEXT_PUBLIC_API_KEY2;
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: `${API_KEY2}`,
+  apiKey: "AIzaSyBZzmy1q9J1dWJiYuOwLk4KNVVpy-EweDE",
   authDomain: "netflix-clone-42492.firebaseapp.com",
   projectId: "netflix-clone-42492",
   storageBucket: "netflix-clone-42492.appspot.com",
